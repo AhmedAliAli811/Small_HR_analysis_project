@@ -1,20 +1,14 @@
 use hr;
 Go
 -- Data Cleaning --
+
 -- remove commisiion_pct from emplyees table "All values are nulls"
 
 alter table employees
 drop column commission_pct
 
-select * from countries
-select * from departments
-select * from employees
-select * from job_history
-select * from jobs
-select * from locations
-select * from regions
 
--- Delete update employees where department_id in non-existent countries 
+--  update employees where department_id in non-existent countries 
 
 update employees
 set department_id = NULL
